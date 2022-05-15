@@ -12,12 +12,12 @@ public:
 
 	void signal_v(string path) override
 	{
-		cout << '\n' << "Signal from " << path;
+		cout << "\nSignal from " << path;
 	}
 
 	void handler_v(string path, string message) override
 	{
-		cout << '\n' << "Signal to " << path
+		cout << "\nSignal to " << path
 			<< " Text: " << message << " (class: 5)";
 	}
 

@@ -141,7 +141,6 @@
   <ItemGroup>
     <ClCompile Include="cl_application.cpp" />
     <ClCompile Include="cl_base.cpp" />
-    <ClCompile Include="cl_branch.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>

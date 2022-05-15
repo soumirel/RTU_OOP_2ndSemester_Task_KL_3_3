@@ -134,7 +134,6 @@ void Cl_application::enterCommands()
 
 	while (command != "END")
 	{
-		cout << '\n';
 		cin >> path;
 
 		objectFromPath = setedObjectPtr->getObjectByPath(path);
