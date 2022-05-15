@@ -25,7 +25,7 @@ public:
 	}
 
 
-	size_t getClassNumber()
+	size_t getClassNumber() override
 	{
 		return 3;
 	}

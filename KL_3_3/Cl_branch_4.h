@@ -21,7 +21,7 @@ public:
 			<< " Text: " << message << " (class: 5)";
 	}
 
-	size_t getClassNumber()
+	size_t getClassNumber() override
 	{
 		return 5;
 	}
