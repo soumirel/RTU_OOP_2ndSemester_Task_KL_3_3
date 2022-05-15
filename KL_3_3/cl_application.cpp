@@ -85,8 +85,6 @@ void Cl_application::buildTree()
 		cin >> path;
 	}
 
-	enterConnections();
-
 	return;
 }
 
@@ -245,6 +243,9 @@ int Cl_application::execApp()
 	// Вывод построенного дерева;
 	cout << "Object tree";
 	root->childrenList.front()->printTree(false);
+
+	// Запуск ввода связей объектов
+	this->enterConnections();
 
 	//Запуск навигации по дереву
 	this->enterCommands();

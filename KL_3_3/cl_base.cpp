@@ -92,7 +92,7 @@ void Cl_base::setReadiness(long long numericReadiness)
 //Установщик связи
 void Cl_base::setConnection(TYPE_SIGNAL signalPtr, Cl_base* objectPtr, TYPE_HANDLER handlerPtr)
 {
-	connectionInfo* tempConnect;
+	connectionInfo* tempConnection;
 
 	for (size_t iter = 0; iter < connections.size(); iter++)
 	{
@@ -104,13 +104,13 @@ void Cl_base::setConnection(TYPE_SIGNAL signalPtr, Cl_base* objectPtr, TYPE_HAND
 		}
 	}
 
-	tempConnect = new connectionInfo();
+	tempConnection = new connectionInfo();
 
-	tempConnect->signalPtr = signalPtr;
-	tempConnect->objectPtr = objectPtr;
-	tempConnect->handlerPtr = handlerPtr;
+	tempConnection->signalPtr = signalPtr;
+	tempConnection->objectPtr = objectPtr;
+	tempConnection->handlerPtr = handlerPtr;
 
-	this->connections.push_back(tempConnect);
+	this->connections.push_back(tempConnection);
 }
 
 
