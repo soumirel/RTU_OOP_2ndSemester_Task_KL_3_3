@@ -104,14 +104,17 @@ void Cl_application::enterReadiness()
 //Запуск этапа ввода для установки связей между объектами
 void Cl_application::enterConnections()
 {
+	Cl_base* firstObjectPtr = nullptr;
+	Cl_base* secondObjectPtr = nullptr;
+
 	string signalPath, handlerPath;
 	cin >> signalPath;
 	while (signalPath != "end_of_connections") 
 	{
 		cin >> handlerPath;
 
-		Cl_base* firstObjectPtr = root->childrenList.front()->getObjectByPath(signalPath);
-		Cl_base* secondObjectPtr = root->childrenList.front()->getObjectByPath(handlerPath);
+		firstObjectPtr = root->childrenList.front()->getObjectByPath(signalPath);
+		secondObjectPtr = root->childrenList.front()->getObjectByPath(handlerPath);
 
 		firstObjectPtr->realizeConnection(firstObjectPtr, secondObjectPtr);
 
