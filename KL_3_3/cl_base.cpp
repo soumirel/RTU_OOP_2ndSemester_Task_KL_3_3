@@ -448,3 +448,16 @@ void Cl_base::printTree(bool isPrintReadiness, unsigned tabLevel)
 		childrenList[i]->printTree(isPrintReadiness, tabLevel + 1);
 	}
 }
+
+
+void Cl_base::signal_v(string path)
+{
+	cout << "\nSignal from " << path;
+}
+
+
+void Cl_base::handler_v(string path, string message)
+{
+	cout << "\nSignal to " << path
+		<< " Text: " << message << " (class: 1)";
+}

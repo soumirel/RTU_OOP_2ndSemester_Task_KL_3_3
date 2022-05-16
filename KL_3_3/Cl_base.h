@@ -61,8 +61,8 @@ public:
 	virtual size_t getClassNumber();
 
 	// Виртуальный метод сигнала и обработчика
-	virtual void signal_v(string path) {};
-	virtual void handler_v(string path, string message) {};
+	virtual void signal_v(string path);
+	virtual void handler_v(string path, string message);
 
 	// Получение указателя на объект через его имя
 	Cl_base* getObjectByName(string name);
