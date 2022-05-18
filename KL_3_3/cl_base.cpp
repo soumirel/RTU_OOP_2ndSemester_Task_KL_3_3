@@ -75,6 +75,11 @@ void Cl_base::setReadiness(long long numericReadiness)
 			tempParentPtr = tempParentPtr->getParent();
 		}
 		this->readiness = true;
+
+		for (size_t i = 0; i < this->childrenList.size(); i++)
+		{
+			this->childrenList.at(i)->setReadiness(numericReadiness);
+		}
 	}
 	else
 	{
